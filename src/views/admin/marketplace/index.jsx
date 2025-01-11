@@ -33,8 +33,7 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import Banner from "views/admin/marketplace/components/Banner";
-import TableTopCreators from "views/admin/marketplace/components/TableTopCreators";
+import StockInputCard from "./components/StockInput";
 import HistoryItem from "views/admin/marketplace/components/HistoryItem";
 import Card from "components/card/Card.js";
 
@@ -45,8 +44,6 @@ import Nft3 from "assets/img/nfts/Nft3.png";
 import Nft4 from "assets/img/nfts/Nft4.png";
 import Nft5 from "assets/img/nfts/Nft5.png";
 import Nft6 from "assets/img/nfts/Nft6.png";
-import tableDataTopCreators from "views/admin/marketplace/variables/tableDataTopCreators.json";
-import { tableColumnsTopCreators } from "views/admin/marketplace/variables/tableColumnsTopCreators";
 
 export default function Marketplace() {
   // Chakra Color Mode
@@ -65,9 +62,7 @@ export default function Marketplace() {
         {/* Main Card 1 */}
         <Flex flexDirection="column">
           <Card px="0px" mb="20px">
-            <TableTopCreators
-              tableData={tableDataTopCreators}
-              columnsData={tableColumnsTopCreators}
+            <StockInputCard
             />
           </Card>
         </Flex>
@@ -109,27 +104,7 @@ export default function Marketplace() {
               image={Nft2}
               price="0.91 ETH"
             />
-            <HistoryItem
-              name="Swipe Circles"
-              author="By Peter Will"
-              date="1m ago"
-              image={Nft4}
-              price="0.91 ETH"
-            />
-            <HistoryItem
-              name="Mesh Gradients "
-              author="By Will Smith"
-              date="2m ago"
-              image={Nft3}
-              price="0.91 ETH"
-            />
-            <HistoryItem
-              name="3D Cubes Art"
-              author="By Manny Gates"
-              date="3m ago"
-              image={Nft6}
-              price="0.91 ETH"
-            />
+
           </Card>
         </Flex>
       </Grid>
